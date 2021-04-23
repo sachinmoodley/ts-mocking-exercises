@@ -10,7 +10,7 @@ export class ItemPriceAdjuster {
     } else if (item.price < 100) {
       item.price = await this.getMarkedUpPrice(item.price)
     }
-    return item
+    return item;
   }
 
   private async getMarkedUpPrice(price: number): Promise<number> {
