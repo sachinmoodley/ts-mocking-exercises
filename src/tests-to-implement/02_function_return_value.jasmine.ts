@@ -3,7 +3,7 @@ import * as CakeIsYummy from '../dependencies/get_all'
 
 describe('function mock return value', () => {
   describe('getAllItemsOnSale', () => {
-    fit('returns only prices under 10', async () => {
+    it('returns only prices under 10', async () => {
       // Arrange
       const items = [
         {
