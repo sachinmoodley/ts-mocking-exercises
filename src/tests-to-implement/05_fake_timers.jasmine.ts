@@ -1,10 +1,24 @@
 import { generateDayMessage } from '../tests-to-implement/05_fake_timers'
 
 describe('generateDayMessage', () => {
-  xit('returns a message containing the current time', () => {
+  beforeEach(() => {
+    jasmine.clock().install();
+  })
+
+  afterEach(() => {
+    jasmine.clock().uninstall();
+  })
+  
+  it('returns a message containing the current time', () => {
     // Arrange
+
+    jasmine.clock().mockDate(new Date("2021-04-23T11:11:11"))
     // Act
+    var message = generateDayMessage();
+
     // Assert
+    expect(message).toBe("[11:11:11 AM]: Today is Friday")
+
   })
 
   xit('returns a message containing the current time after some time has elapsed', () => {
