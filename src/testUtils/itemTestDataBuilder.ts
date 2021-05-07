@@ -1,4 +1,5 @@
 import { Item } from "../dependencies/Item"
+import * as fakerStatic from "faker"
 
 export class ItemTestDataBuilder {
   private price: number | null = null;
