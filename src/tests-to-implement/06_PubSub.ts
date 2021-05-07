@@ -25,7 +25,7 @@ export class PubSub {
 
     for (const callback of this.subscriptions[channel]) {
       setTimeout(() => {
-        callback(payload)
+         callback(payload)
       }, Math.floor(Math.random() * 500 + 100))
     }
   }
