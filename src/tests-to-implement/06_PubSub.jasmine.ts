@@ -15,7 +15,7 @@ describe('PubSub', () => {
       expect(callback).toHaveBeenCalled();
     })
 
-    fit('calls all subscription callbacks when publish occurs on channel', async () => {
+    it('calls all subscription callbacks when publish occurs on channel', async () => {
       // Arrange
       const sut = new PubSub();
       // Act     
